@@ -1,0 +1,115 @@
+{
+  "model": "typesafe/jev-1.13",
+  "state": {
+    "goal": "From price.com.hk search results for 'Sony PlayStation 5', open the single best-matching product page for the user's intended product/specs. Prefer exact preferred name when supplied; otherwise match must_include tokens and reject must_exclude distractors (e.g. wrong capacity, Pro Max vs Pro, wrong generation).",
+    "source": {
+      "site": "https://www.price.com.hk/",
+      "search_url": "https://www.price.com.hk/search.php?g=A&q=Sony%20PlayStation%205",
+      "retrieved": "2026-10-02T02:23+0800",
+      "timezone": "Asia/Hong_Kong"
+    },
+    "user_intent": {
+      "search_query": "Sony PlayStation 5",
+      "must_include_in_name": [
+        "PlayStation 5"
+      ],
+      "must_exclude_from_name": [
+        "Pro",
+        "Slim",
+        "Digital",
+        "數位",
+        "控制器",
+        "護蓋",
+        "耳機",
+        "直立架",
+        "同捆",
+        "限量"
+      ],
+      "preferred_exact_name": null
+    },
+    "permissions": "Read-only navigation and price reading; no purchase, login, or messaging merchants.",
+    "search_hits": {
+      "p1": {
+        "name": "Sony PlayStation 5 Pro",
+        "product_id": "638498",
+        "listed_prices_hkd": []
+      },
+      "p2": {
+        "name": "Sony PlayStation 5",
+        "product_id": "456860",
+        "listed_prices_hkd": []
+      },
+      "p3": {
+        "name": "Sony Playstation 5 主機 -《羊蹄山戰鬼》黃金限量版同捆組",
+        "product_id": "671593",
+        "listed_prices_hkd": []
+      },
+      "p4": {
+        "name": "Sony PlayStation 5 Slim (光碟版)",
+        "product_id": "602959",
+        "listed_prices_hkd": []
+      },
+      "p5": {
+        "name": "Sony PlayStation 5 Slim Digital Edition (數碼版)",
+        "product_id": "602970",
+        "listed_prices_hkd": []
+      },
+      "p6": {
+        "name": "Sony PlayStation 5數位版－30週年限量版組合包",
+        "product_id": "640293",
+        "listed_prices_hkd": []
+      },
+      "p7": {
+        "name": "Sony PlayStation 5 Digital Edition",
+        "product_id": "456861",
+        "listed_prices_hkd": []
+      },
+      "p8": {
+        "name": "Sony PlayStation 5 DualSense 無線控制器 (午夜黑+USB連接線)",
+        "product_id": "687251",
+        "listed_prices_hkd": []
+      },
+      "p9": {
+        "name": "Sony PlayStation 5主機護蓋《羊蹄山戰鬼》黃金限量版",
+        "product_id": "674022",
+        "listed_prices_hkd": []
+      },
+      "p10": {
+        "name": "Sony Playstation 5 Pulse 3D 無線耳機",
+        "product_id": "487386",
+        "listed_prices_hkd": []
+      },
+      "p11": {
+        "name": "Sony PlayStation 5 Slim 專用主機直立架",
+        "product_id": "612268",
+        "listed_prices_hkd": []
+      },
+      "p12": {
+        "name": "Sony PlayStation 5 Pro主機－30週年限量版組合包",
+        "product_id": "640295",
+        "listed_prices_hkd": []
+      }
+    }
+  },
+  "questions": {
+    "open_product": {
+      "type": "choice",
+      "instructions": "Choose the search hit in state.search_hits that best matches state.user_intent. Preferred exact name: (none). Name should include all of: PlayStation 5. Reject hits whose name contains any of: Pro, Slim, Digital, 數位, 控制器, 護蓋, 耳機, 直立架, 同捆, 限量. If several remain, pick the closest retail product match to the search query. Choose none if nothing fits.",
+      "criteria": {
+        "p1": "Open product_id=638498 named Sony PlayStation 5 Pro (listed []).",
+        "p2": "Open product_id=456860 named Sony PlayStation 5 (listed []).",
+        "p3": "Open product_id=671593 named Sony Playstation 5 主機 -《羊蹄山戰鬼》黃金限量版同捆組 (listed []).",
+        "p4": "Open product_id=602959 named Sony PlayStation 5 Slim (光碟版) (listed []).",
+        "p5": "Open product_id=602970 named Sony PlayStation 5 Slim Digital Edition (數碼版) (listed []).",
+        "p6": "Open product_id=640293 named Sony PlayStation 5數位版－30週年限量版組合包 (listed []).",
+        "p7": "Open product_id=456861 named Sony PlayStation 5 Digital Edition (listed []).",
+        "p8": "Open product_id=687251 named Sony PlayStation 5 DualSense 無線控制器 (午夜黑+USB連接線) (listed []).",
+        "p9": "Open product_id=674022 named Sony PlayStation 5主機護蓋《羊蹄山戰鬼》黃金限量版 (listed []).",
+        "p10": "Open product_id=487386 named Sony Playstation 5 Pulse 3D 無線耳機 (listed []).",
+        "p11": "Open product_id=612268 named Sony PlayStation 5 Slim 專用主機直立架 (listed []).",
+        "p12": "Open product_id=640295 named Sony PlayStation 5 Pro主機－30週年限量版組合包 (listed []).",
+        "none": "No observed search hit matches the user product intent."
+      }
+    }
+  }
+}

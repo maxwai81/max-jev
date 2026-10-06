@@ -1,0 +1,131 @@
+{
+  "model": "typesafe/jev-1.13",
+  "state": {
+    "goal": "Report the latest merchant list price on price.com.hk for Sony PlayStation 5 as of yesterday (2026-10-01 Asia/Hong_Kong): among quotes whose update_date equals yesterday, select the lowest listed HKD price (最平報價 for that day).",
+    "source": {
+      "site": "https://www.price.com.hk/",
+      "search_query": "Sony PlayStation 5",
+      "product_url": "https://www.price.com.hk/product.php?p=456860",
+      "product_id": "456860",
+      "product_name": "Sony PlayStation 5",
+      "retrieved": "2026-10-02T02:23+0800",
+      "timezone": "Asia/Hong_Kong"
+    },
+    "as_of_policy": {
+      "yesterday": "2026-10-01",
+      "eligible_quote_rule": "quote.update_date == yesterday",
+      "selection_rule": "lowest price_hkd among eligible quotes",
+      "exclude": [
+        "Quotes updated today or earlier than yesterday",
+        "Wrong product variants already rejected at navigation",
+        "Do not invent prices absent from state.quotes"
+      ]
+    },
+    "price_history_chart_tail": {
+      "hong_last": [
+        {
+          "x": "2026-09-26",
+          "y": "5034.083"
+        },
+        {
+          "x": "2026-09-27",
+          "y": "5034.083"
+        },
+        {
+          "x": "2026-09-28",
+          "y": "5020.818"
+        },
+        {
+          "x": "2026-09-29",
+          "y": "5029.909"
+        },
+        {
+          "x": "2026-09-30",
+          "y": "5048.091"
+        }
+      ],
+      "water_last": [
+        {
+          "x": "2026-09-26",
+          "y": "4443.800"
+        },
+        {
+          "x": "2026-09-27",
+          "y": "4443.800"
+        },
+        {
+          "x": "2026-09-28",
+          "y": "4443.800"
+        },
+        {
+          "x": "2026-09-29",
+          "y": "4443.800"
+        },
+        {
+          "x": "2026-09-30",
+          "y": "4382.111"
+        }
+      ]
+    },
+    "quotes": {
+      "q1": {
+        "merchant": "軟硬電腦 Softhard Computer",
+        "update_date": "2026-10-02",
+        "price_hkd": 5399.0,
+        "channel": "行貨",
+        "tr_qd": "20261002"
+      },
+      "q2": {
+        "merchant": "Pro Toy Shop",
+        "update_date": "2026-10-01",
+        "price_hkd": 5200.0,
+        "channel": "行貨",
+        "tr_qd": "20261001"
+      },
+      "q3": {
+        "merchant": "Foresoon Computer 科訊電腦",
+        "update_date": "2026-10-01",
+        "price_hkd": 5580.0,
+        "channel": "行貨",
+        "tr_qd": "20261001"
+      },
+      "q4": {
+        "merchant": "Hill Sound",
+        "update_date": "2024-10-29",
+        "price_hkd": 3400.0,
+        "channel": "行貨",
+        "tr_qd": "20241029"
+      }
+    },
+    "permissions": "Read-only; no purchase or merchant contact."
+  },
+  "questions": {
+    "quote_is_as_of_yesterday_eligible": {
+      "type": "noul",
+      "instructions": "Is there at least one quote in state.quotes whose update_date equals state.as_of_policy.yesterday and that has a numeric price_hkd?",
+      "criteria": {
+        "true": "One or more quotes are dated yesterday with a listed HKD price.",
+        "false": "No yesterday-dated quote with a listed price is present."
+      }
+    },
+    "lowest_price_quote_as_of_yesterday": {
+      "type": "choice",
+      "instructions": "Using only state.quotes and state.as_of_policy, choose the candidate id of the eligible yesterday quote with the lowest price_hkd. If several share that price, prefer 行貨 over 水貨/unknown, then the earlier candidate id. Choose none if no quote qualifies.",
+      "criteria": {
+        "q1": "軟硬電腦 Softhard Computer: HK$5399.0 行貨 updated 2026-10-02",
+        "q2": "Pro Toy Shop: HK$5200.0 行貨 updated 2026-10-01",
+        "q3": "Foresoon Computer 科訊電腦: HK$5580.0 行貨 updated 2026-10-01",
+        "q4": "Hill Sound: HK$3400.0 行貨 updated 2024-10-29",
+        "none": "No quote is eligible for the as-of-yesterday rule."
+      }
+    },
+    "evidence_enough_to_report_price": {
+      "type": "noul",
+      "instructions": "Is the supplied product identity plus yesterday-dated quote list sufficient to report a single HKD list price for Sony PlayStation 5 as of yesterday without browsing further?",
+      "criteria": {
+        "true": "Product is identified and at least one eligible yesterday quote exists.",
+        "false": "Product mismatch, missing dates, or no usable yesterday quote."
+      }
+    }
+  }
+}

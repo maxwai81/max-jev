@@ -1,0 +1,136 @@
+{
+  "query": "Sony PlayStation 5",
+  "must_include": [
+    "PlayStation 5"
+  ],
+  "must_exclude": [
+    "Pro",
+    "Slim",
+    "Digital",
+    "數位",
+    "控制器",
+    "護蓋",
+    "耳機",
+    "直立架",
+    "同捆",
+    "限量"
+  ],
+  "target_hint": null,
+  "as_of_yesterday": "2026-10-01",
+  "search_url": "https://www.price.com.hk/search.php?g=A&q=Sony%20PlayStation%205",
+  "jev_settings": {
+    "model": "typesafe/jev-1.13",
+    "provider": "openrouter",
+    "policy": {
+      "min_probability": 0.8,
+      "min_margin": 0.15,
+      "review_labels": [
+        "abstain",
+        "ask_user",
+        "defer",
+        "insufficient_evidence",
+        "none",
+        "other",
+        "review",
+        "unknown",
+        "wait"
+      ],
+      "executes_actions": false
+    },
+    "navigate": {
+      "question": "open_product",
+      "type": "choice",
+      "user_intent": {
+        "search_query": "Sony PlayStation 5",
+        "must_include_in_name": [
+          "PlayStation 5"
+        ],
+        "must_exclude_from_name": [
+          "Pro",
+          "Slim",
+          "Digital",
+          "數位",
+          "控制器",
+          "護蓋",
+          "耳機",
+          "直立架",
+          "同捆",
+          "限量"
+        ],
+        "preferred_exact_name": null
+      }
+    },
+    "price": {
+      "as_of_yesterday": "2026-10-01",
+      "eligible_quote_rule": "quote.update_date == yesterday",
+      "selection_rule": "lowest price_hkd among eligible quotes; 行貨 on ties",
+      "questions": {
+        "quote_is_as_of_yesterday_eligible": "noul",
+        "lowest_price_quote_as_of_yesterday": "choice",
+        "evidence_enough_to_report_price": "noul"
+      }
+    }
+  },
+  "jev_navigate": {
+    "question": "open_product",
+    "selected": "p2",
+    "decision": {
+      "status": "selected",
+      "value": "p2",
+      "probability": 1,
+      "margin": 1
+    },
+    "product": {
+      "name": "Sony PlayStation 5",
+      "product_id": "456860",
+      "listed_prices_hkd": []
+    },
+    "elapsed_seconds": 0.426643,
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1874,
+      "output_tokens": 125,
+      "cost": 7.8708e-05
+    }
+  },
+  "jev_price": {
+    "questions": {
+      "quote_is_as_of_yesterday_eligible": {
+        "status": "selected",
+        "value": true,
+        "probability": 0.99
+      },
+      "lowest_price_quote_as_of_yesterday": {
+        "status": "selected",
+        "value": "q2",
+        "probability": 1,
+        "margin": 1
+      },
+      "evidence_enough_to_report_price": {
+        "status": "selected",
+        "value": true,
+        "probability": 0.95
+      }
+    },
+    "selected_quote_id": "q2",
+    "selected_quote": {
+      "merchant": "Pro Toy Shop",
+      "update_date": "2026-10-01",
+      "price_hkd": 5200.0,
+      "channel": "行貨",
+      "tr_qd": "20261001"
+    },
+    "elapsed_seconds": 0.499892,
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1671,
+      "output_tokens": 113,
+      "cost": 7.0182e-05
+    }
+  },
+  "final_price_hkd": 5200.0,
+  "final_merchant": "Pro Toy Shop",
+  "final_channel": "行貨",
+  "eligible_noul": true,
+  "evidence_enough": true
+}

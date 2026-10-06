@@ -1,0 +1,48 @@
+{
+  "decisions": {
+    "hr_ai_investment_heaviness": {
+      "status": "scored",
+      "value": 3,
+      "level": "Heavy: dedicated narrative with multiple concrete domain capabilities AND at least one domain-linked quantified outcome or customer proof on this page."
+    },
+    "finance_ai_investment_heaviness": {
+      "status": "scored",
+      "value": 3,
+      "level": "Heavy: dedicated narrative with multiple concrete domain capabilities AND at least one domain-linked quantified outcome or customer proof on this page."
+    },
+    "it_ai_investment_heaviness": {
+      "status": "scored",
+      "value": 1,
+      "level": "Named but thin: dedicated domain label or short blurb exists, but capabilities are generic and there is no domain-linked quantified outcome or customer proof."
+    },
+    "page_evidence_enough_to_compare": {
+      "status": "selected",
+      "value": true
+    },
+    "heaviest_domain_on_page": {
+      "status": "selected",
+      "value": "hr"
+    }
+  },
+  "reasons": {
+    "hr_ai_investment_heaviness": "Agentic HR has a dedicated narrative, multiple HR capabilities such as elevating managers and amplifying talent, plus domain-linked outcomes of 54% recruiter capability and 39% lower top-talent turnover and joint Medidata proof.",
+    "finance_ai_investment_heaviness": "Agentic Finance has a dedicated narrative, concrete capabilities including surfacing exceptions, anticipating change, and predicting next best action, plus a 49% FP&A efficiency outcome and joint Medidata finance proof.",
+    "it_ai_investment_heaviness": "Agentic IT is a dedicated but generic trust/agility/data blurb with no IT-linked quantified outcome or customer proof, so shared platform claims do not raise it.",
+    "page_evidence_enough_to_compare": "HR, Finance, and IT each have a dedicated Agentic section with attributable signals sufficient to place all three on the rubric.",
+    "heaviest_domain_on_page": "HR matches Finance’s dedicated narrative and proof but adds two domain-specific quantified outcomes versus Finance’s one, while IT has neither."
+  },
+  "response": {
+    "model": "x-ai/grok-4.7",
+    "usage": {
+      "input_tokens": 3351,
+      "output_tokens": 2327,
+      "cost": 0.018936
+    },
+    "id": "gen-1790836836-i64s0ppV7UqyB7yfr12O",
+    "provider": "xAI"
+  },
+  "elapsed_seconds": 28.711697,
+  "mode": "pure_llm",
+  "jev_called": false,
+  "transport": "openrouter_chat"
+}

@@ -1,0 +1,204 @@
+{
+  "retrieved": "2026-10-02T02:23+0800",
+  "as_of_yesterday": "2026-10-01",
+  "search_url": "https://www.price.com.hk/search.php?g=A&q=Sony%20PlayStation%205",
+  "query": "Sony PlayStation 5",
+  "must_include": [
+    "PlayStation 5"
+  ],
+  "must_exclude": [
+    "Pro",
+    "Slim",
+    "Digital",
+    "數位",
+    "控制器",
+    "護蓋",
+    "耳機",
+    "直立架",
+    "同捆",
+    "限量"
+  ],
+  "target_hint": null,
+  "search_hits": [
+    {
+      "name": "Sony PlayStation 5 Pro",
+      "product_id": "638498",
+      "listed_prices_hkd": []
+    },
+    {
+      "name": "Sony PlayStation 5",
+      "product_id": "456860",
+      "listed_prices_hkd": []
+    },
+    {
+      "name": "Sony Playstation 5 主機 -《羊蹄山戰鬼》黃金限量版同捆組",
+      "product_id": "671593",
+      "listed_prices_hkd": []
+    },
+    {
+      "name": "Sony PlayStation 5 Slim (光碟版)",
+      "product_id": "602959",
+      "listed_prices_hkd": []
+    },
+    {
+      "name": "Sony PlayStation 5 Slim Digital Edition (數碼版)",
+      "product_id": "602970",
+      "listed_prices_hkd": []
+    },
+    {
+      "name": "Sony PlayStation 5數位版－30週年限量版組合包",
+      "product_id": "640293",
+      "listed_prices_hkd": []
+    },
+    {
+      "name": "Sony PlayStation 5 Digital Edition",
+      "product_id": "456861",
+      "listed_prices_hkd": []
+    },
+    {
+      "name": "Sony PlayStation 5 DualSense 無線控制器 (午夜黑+USB連接線)",
+      "product_id": "687251",
+      "listed_prices_hkd": []
+    },
+    {
+      "name": "Sony PlayStation 5主機護蓋《羊蹄山戰鬼》黃金限量版",
+      "product_id": "674022",
+      "listed_prices_hkd": []
+    },
+    {
+      "name": "Sony Playstation 5 Pulse 3D 無線耳機",
+      "product_id": "487386",
+      "listed_prices_hkd": []
+    },
+    {
+      "name": "Sony PlayStation 5 Slim 專用主機直立架",
+      "product_id": "612268",
+      "listed_prices_hkd": []
+    },
+    {
+      "name": "Sony PlayStation 5 Pro主機－30週年限量版組合包",
+      "product_id": "640295",
+      "listed_prices_hkd": []
+    },
+    {
+      "name": "Sony PlayStation 5 主機護蓋 (漫威狼人 Marvel's Wolverine 戰鬥黃色限量版)",
+      "product_id": "695184",
+      "listed_prices_hkd": []
+    },
+    {
+      "name": "Sony PlayStation 5 Pro 主機護蓋 (漫威狼人 Marvel's Wolverine 戰鬥黃色限量版)",
+      "product_id": "695185",
+      "listed_prices_hkd": []
+    },
+    {
+      "name": "Sony Playstation 5 主機 -《Marvel's Spider-Man 2》限量版同捆組套裝",
+      "product_id": "598864",
+      "listed_prices_hkd": []
+    }
+  ],
+  "jev_selected_product_id": "p2",
+  "product": {
+    "name": "Sony PlayStation 5",
+    "product_id": "456860",
+    "listed_prices_hkd": []
+  },
+  "quotes": [
+    {
+      "merchant": "軟硬電腦 Softhard Computer",
+      "update_date": "2026-10-02",
+      "price_hkd": 5399.0,
+      "channel": "行貨",
+      "tr_qd": "20261002"
+    },
+    {
+      "merchant": "Pro Toy Shop",
+      "update_date": "2026-10-01",
+      "price_hkd": 5200.0,
+      "channel": "行貨",
+      "tr_qd": "20261001"
+    },
+    {
+      "merchant": "Foresoon Computer 科訊電腦",
+      "update_date": "2026-10-01",
+      "price_hkd": 5580.0,
+      "channel": "行貨",
+      "tr_qd": "20261001"
+    },
+    {
+      "merchant": "Hill Sound",
+      "update_date": "2024-10-29",
+      "price_hkd": 3400.0,
+      "channel": "行貨",
+      "tr_qd": "20241029"
+    }
+  ],
+  "eligible_yesterday_quotes": [
+    {
+      "merchant": "Pro Toy Shop",
+      "update_date": "2026-10-01",
+      "price_hkd": 5200.0,
+      "channel": "行貨",
+      "tr_qd": "20261001"
+    },
+    {
+      "merchant": "Foresoon Computer 科訊電腦",
+      "update_date": "2026-10-01",
+      "price_hkd": 5580.0,
+      "channel": "行貨",
+      "tr_qd": "20261001"
+    }
+  ],
+  "deterministic_lowest_yesterday": {
+    "merchant": "Pro Toy Shop",
+    "update_date": "2026-10-01",
+    "price_hkd": 5200.0,
+    "channel": "行貨",
+    "tr_qd": "20261001"
+  },
+  "price_history_chart_tail": {
+    "hong_last": [
+      {
+        "x": "2026-09-26",
+        "y": "5034.083"
+      },
+      {
+        "x": "2026-09-27",
+        "y": "5034.083"
+      },
+      {
+        "x": "2026-09-28",
+        "y": "5020.818"
+      },
+      {
+        "x": "2026-09-29",
+        "y": "5029.909"
+      },
+      {
+        "x": "2026-09-30",
+        "y": "5048.091"
+      }
+    ],
+    "water_last": [
+      {
+        "x": "2026-09-26",
+        "y": "4443.800"
+      },
+      {
+        "x": "2026-09-27",
+        "y": "4443.800"
+      },
+      {
+        "x": "2026-09-28",
+        "y": "4443.800"
+      },
+      {
+        "x": "2026-09-29",
+        "y": "4443.800"
+      },
+      {
+        "x": "2026-09-30",
+        "y": "4382.111"
+      }
+    ]
+  }
+}

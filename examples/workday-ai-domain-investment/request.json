@@ -1,0 +1,132 @@
+{
+  "model": "typesafe/jev-1.13",
+  "state": {
+    "goal": "Score how heavily Workday's public AI marketing positions investment/emphasis in HR, IT, and Finance based only on the supplied page evidence. This is a content-signal score, not a claim about actual R&D spend or dollars invested.",
+    "source": {
+      "url": "https://www.workday.com/en-us/artificial-intelligence.html",
+      "retrieved": "2026-10-01",
+      "page_title": "Artificial Intelligence (AI) Solutions for Business | Workday US"
+    },
+    "scoring_policy": {
+      "definition": "AI investment heaviness means how strongly the page allocates named product framing, concrete AI capabilities, quantified outcomes, and customer proof to that domain versus treating it as a generic mention.",
+      "do_not_infer": [
+        "Do not invent capabilities, metrics, customers, or headcount not present in state.evidence.",
+        "Do not treat shared platform claims as equal domain investment unless the domain is explicitly named with those claims.",
+        "Do not score Legal or other domains; only HR, Finance, and IT.",
+        "Scores compare relative marketing emphasis on this page, not absolute corporate investment."
+      ],
+      "levels": [
+        "Absent or incidental: domain is not given a dedicated AI product section; only a list mention or no usable evidence.",
+        "Named but thin: dedicated domain label or short blurb exists, but capabilities are generic and there is no domain-linked quantified outcome or customer proof.",
+        "Substantive: dedicated agentic/product narrative plus at least one concrete domain capability OR one domain-linked quantified outcome/customer proof.",
+        "Heavy: dedicated narrative with multiple concrete domain capabilities AND at least one domain-linked quantified outcome or customer proof on this page."
+      ]
+    },
+    "evidence": {
+      "shared_platform": [
+        "Hero: 'AI that truly knows your business' with Sana automating work across HR, finance, IT, and beyond.",
+        "Platform claim: built on Workday data; integrate business apps; build, orchestrate, and manage agents across business functions.",
+        "Trust/platform pillars: humans at the center; value-centric innovation; unrivaled data and context; open extensible platform; proven responsible AI (ISO 42001); flex credits usage-based pricing.",
+        "Customer proof spanning domains: 'Medidata has saved over $1.46 million annually in costs through the automation of finance and HR workflows.'"
+      ],
+      "domains": {
+        "hr": {
+          "dedicated_section": "Agentic HR. Drive operational excellence by empowering your people, elevating managers, and automating processes with AI built for HR.",
+          "capability_signals": [
+            "AI built for HR",
+            "empower people",
+            "elevate managers",
+            "automate processes",
+            "Amplify talent potential: free people from mundane tasks; more time for skills and growth"
+          ],
+          "quantified_outcomes": [
+            "54% boost in recruiter capability",
+            "39% reduction in top talent turnover"
+          ],
+          "customer_proof": [
+            "Medidata automation of finance and HR workflows ($1.46M annual savings cited jointly with finance)"
+          ]
+        },
+        "finance": {
+          "dedicated_section": "Agentic Finance. Go from hindsight to insight with AI that surfaces exceptions, anticipates change, and predicts the next best action.",
+          "capability_signals": [
+            "surfaces exceptions",
+            "anticipates change",
+            "predicts the next best action",
+            "Improve strategic decisions / insights framing appears in general ROI section"
+          ],
+          "quantified_outcomes": [
+            "49% increase in financial planning and analysis efficiency"
+          ],
+          "customer_proof": [
+            "Medidata automation of finance and HR workflows ($1.46M annual savings cited jointly with HR)"
+          ]
+        },
+        "it": {
+          "dedicated_section": "Agentic IT. Realize ROI fast and deliver transformational outcomes by partnering with an AI platform driven by trust, agility, and quality data you can always rely on.",
+          "capability_signals": [
+            "AI platform partnership framing",
+            "trust, agility, quality data",
+            "Shared platform: build/orchestrate/manage agents; open extensible platform; flex credits"
+          ],
+          "quantified_outcomes": [],
+          "customer_proof": []
+        }
+      },
+      "explicitly_out_of_scope_on_page": [
+        "Agentic Legal section and 70% reduction in outside legal spend are present on the page but must not be scored as HR/IT/Finance investment."
+      ]
+    }
+  },
+  "questions": {
+    "hr_ai_investment_heaviness": {
+      "type": "score",
+      "instructions": "Using only state.evidence.domains.hr plus shared items that explicitly name HR, score AI investment heaviness for HR under state.scoring_policy. Do not use Legal metrics. Do not credit IT-only platform language to HR.",
+      "criteria": [
+        "Absent or incidental: domain is not given a dedicated AI product section; only a list mention or no usable evidence.",
+        "Named but thin: dedicated domain label or short blurb exists, but capabilities are generic and there is no domain-linked quantified outcome or customer proof.",
+        "Substantive: dedicated agentic/product narrative plus at least one concrete domain capability OR one domain-linked quantified outcome/customer proof.",
+        "Heavy: dedicated narrative with multiple concrete domain capabilities AND at least one domain-linked quantified outcome or customer proof on this page."
+      ]
+    },
+    "finance_ai_investment_heaviness": {
+      "type": "score",
+      "instructions": "Using only state.evidence.domains.finance plus shared items that explicitly name finance, score AI investment heaviness for Finance under state.scoring_policy. Do not use Legal metrics. Do not credit HR-only recruiter/talent metrics to Finance.",
+      "criteria": [
+        "Absent or incidental: domain is not given a dedicated AI product section; only a list mention or no usable evidence.",
+        "Named but thin: dedicated domain label or short blurb exists, but capabilities are generic and there is no domain-linked quantified outcome or customer proof.",
+        "Substantive: dedicated agentic/product narrative plus at least one concrete domain capability OR one domain-linked quantified outcome/customer proof.",
+        "Heavy: dedicated narrative with multiple concrete domain capabilities AND at least one domain-linked quantified outcome or customer proof on this page."
+      ]
+    },
+    "it_ai_investment_heaviness": {
+      "type": "score",
+      "instructions": "Using only state.evidence.domains.it plus shared platform items that are explicitly IT-facing, score AI investment heaviness for IT under state.scoring_policy. Platform trust/extensibility claims may support IT only when the page ties them to Agentic IT or IT outcomes. Absence of IT-specific quantified outcomes must lower the score versus domains that have them.",
+      "criteria": [
+        "Absent or incidental: domain is not given a dedicated AI product section; only a list mention or no usable evidence.",
+        "Named but thin: dedicated domain label or short blurb exists, but capabilities are generic and there is no domain-linked quantified outcome or customer proof.",
+        "Substantive: dedicated agentic/product narrative plus at least one concrete domain capability OR one domain-linked quantified outcome/customer proof.",
+        "Heavy: dedicated narrative with multiple concrete domain capabilities AND at least one domain-linked quantified outcome or customer proof on this page."
+      ]
+    },
+    "page_evidence_enough_to_compare": {
+      "type": "noul",
+      "instructions": "Is the supplied page evidence sufficient to compare relative AI marketing emphasis across HR, Finance, and IT without needing other Workday pages?",
+      "criteria": {
+        "true": "Each of HR, Finance, and IT has a dedicated section or clearly attributable signals on this page, enough to place them on the scoring_policy levels.",
+        "false": "At least one target domain lacks attributable evidence, or the page is too generic to support a three-way comparison."
+      }
+    },
+    "heaviest_domain_on_page": {
+      "type": "choice",
+      "instructions": "Which domain shows the heaviest AI investment emphasis on this page under state.scoring_policy? Prefer domains with dedicated narrative plus quantified outcomes/customer proof. Choose tie only if two or more are equally heavy; choose insufficient_evidence if comparison is not supportable.",
+      "criteria": {
+        "hr": "HR has the strongest combination of dedicated narrative, concrete capabilities, and domain-linked outcomes/proof.",
+        "finance": "Finance has the strongest combination of dedicated narrative, concrete capabilities, and domain-linked outcomes/proof.",
+        "it": "IT has the strongest combination of dedicated narrative, concrete capabilities, and domain-linked outcomes/proof.",
+        "tie": "Two or more of HR/Finance/IT are equally heavy on the supplied evidence.",
+        "insufficient_evidence": "The page does not support a reliable heaviest-domain choice."
+      }
+    }
+  }
+}

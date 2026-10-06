@@ -1,0 +1,144 @@
+{
+  "decisions": {
+    "hr_ai_investment_heaviness": {
+      "status": "scored",
+      "value": 2.86,
+      "levels": [
+        "Absent or incidental: domain is not given a dedicated AI product section; only a list mention or no usable evidence.",
+        "Named but thin: dedicated domain label or short blurb exists, but capabilities are generic and there is no domain-linked quantified outcome or customer proof.",
+        "Substantive: dedicated agentic/product narrative plus at least one concrete domain capability OR one domain-linked quantified outcome/customer proof.",
+        "Heavy: dedicated narrative with multiple concrete domain capabilities AND at least one domain-linked quantified outcome or customer proof on this page."
+      ]
+    },
+    "finance_ai_investment_heaviness": {
+      "status": "scored",
+      "value": 2.99,
+      "levels": [
+        "Absent or incidental: domain is not given a dedicated AI product section; only a list mention or no usable evidence.",
+        "Named but thin: dedicated domain label or short blurb exists, but capabilities are generic and there is no domain-linked quantified outcome or customer proof.",
+        "Substantive: dedicated agentic/product narrative plus at least one concrete domain capability OR one domain-linked quantified outcome/customer proof.",
+        "Heavy: dedicated narrative with multiple concrete domain capabilities AND at least one domain-linked quantified outcome or customer proof on this page."
+      ]
+    },
+    "it_ai_investment_heaviness": {
+      "status": "scored",
+      "value": 1.06,
+      "levels": [
+        "Absent or incidental: domain is not given a dedicated AI product section; only a list mention or no usable evidence.",
+        "Named but thin: dedicated domain label or short blurb exists, but capabilities are generic and there is no domain-linked quantified outcome or customer proof.",
+        "Substantive: dedicated agentic/product narrative plus at least one concrete domain capability OR one domain-linked quantified outcome/customer proof.",
+        "Heavy: dedicated narrative with multiple concrete domain capabilities AND at least one domain-linked quantified outcome or customer proof on this page."
+      ]
+    },
+    "page_evidence_enough_to_compare": {
+      "status": "selected",
+      "value": true,
+      "probability": 0.89
+    },
+    "heaviest_domain_on_page": {
+      "status": "needs_review",
+      "value": "hr",
+      "probability": 0.58,
+      "margin": 0.25999999999999995
+    }
+  },
+  "response": {
+    "model": "typesafe/jev-1.13-20260917",
+    "answers": {
+      "hr_ai_investment_heaviness": {
+        "type": "score",
+        "score": 2.86,
+        "legend": {
+          "0": "Absent or incidental: domain is not given a dedicated AI product section; only a list mention or no usable evidence.",
+          "1": "Named but thin: dedicated domain label or short blurb exists, but capabilities are generic and there is no domain-linked quantified outcome or customer proof.",
+          "2": "Substantive: dedicated agentic/product narrative plus at least one concrete domain capability OR one domain-linked quantified outcome/customer proof.",
+          "3": "Heavy: dedicated narrative with multiple concrete domain capabilities AND at least one domain-linked quantified outcome or customer proof on this page."
+        },
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.13,
+          "3": 0.87
+        },
+        "confidence": 0.86
+      },
+      "finance_ai_investment_heaviness": {
+        "type": "score",
+        "score": 2.99,
+        "legend": {
+          "0": "Absent or incidental: domain is not given a dedicated AI product section; only a list mention or no usable evidence.",
+          "1": "Named but thin: dedicated domain label or short blurb exists, but capabilities are generic and there is no domain-linked quantified outcome or customer proof.",
+          "2": "Substantive: dedicated agentic/product narrative plus at least one concrete domain capability OR one domain-linked quantified outcome/customer proof.",
+          "3": "Heavy: dedicated narrative with multiple concrete domain capabilities AND at least one domain-linked quantified outcome or customer proof on this page."
+        },
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.99
+        },
+        "confidence": 0.99
+      },
+      "it_ai_investment_heaviness": {
+        "type": "score",
+        "score": 1.06,
+        "legend": {
+          "0": "Absent or incidental: domain is not given a dedicated AI product section; only a list mention or no usable evidence.",
+          "1": "Named but thin: dedicated domain label or short blurb exists, but capabilities are generic and there is no domain-linked quantified outcome or customer proof.",
+          "2": "Substantive: dedicated agentic/product narrative plus at least one concrete domain capability OR one domain-linked quantified outcome/customer proof.",
+          "3": "Heavy: dedicated narrative with multiple concrete domain capabilities AND at least one domain-linked quantified outcome or customer proof on this page."
+        },
+        "probabilities": {
+          "0": 0,
+          "1": 0.94,
+          "2": 0.06,
+          "3": 0
+        },
+        "confidence": 0.94
+      },
+      "page_evidence_enough_to_compare": {
+        "type": "noul",
+        "noul": 0.89
+      },
+      "heaviest_domain_on_page": {
+        "type": "choice",
+        "choice": "hr",
+        "probabilities": {
+          "it": 0,
+          "insufficient_evidence": 0,
+          "finance": 0.1,
+          "tie": 0.32,
+          "hr": 0.58
+        },
+        "confidence": 0.47
+      }
+    },
+    "usage": {
+      "input_tokens": 2199,
+      "output_tokens": 146,
+      "cost": 9.2358e-05
+    },
+    "id": "gen-dec-1790836636-24U3DonK9PyrQHVEc2sz",
+    "provider": "TypeSafe"
+  },
+  "policy": {
+    "min_probability": 0.8,
+    "min_margin": 0.15,
+    "review_labels": [
+      "abstain",
+      "ask_user",
+      "defer",
+      "insufficient_evidence",
+      "none",
+      "other",
+      "review",
+      "unknown",
+      "wait"
+    ],
+    "executes_actions": false
+  },
+  "elapsed_seconds": 0.629725,
+  "mode": "jev_api",
+  "jev_called": true,
+  "transport": "openrouter"
+}

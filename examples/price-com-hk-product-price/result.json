@@ -1,0 +1,72 @@
+{
+  "decisions": {
+    "quote_is_as_of_yesterday_eligible": {
+      "status": "selected",
+      "value": true,
+      "probability": 0.99
+    },
+    "lowest_price_quote_as_of_yesterday": {
+      "status": "selected",
+      "value": "q2",
+      "probability": 1,
+      "margin": 1
+    },
+    "evidence_enough_to_report_price": {
+      "status": "selected",
+      "value": true,
+      "probability": 0.95
+    }
+  },
+  "response": {
+    "model": "typesafe/jev-1.13-20260917",
+    "answers": {
+      "quote_is_as_of_yesterday_eligible": {
+        "type": "noul",
+        "noul": 0.99
+      },
+      "lowest_price_quote_as_of_yesterday": {
+        "type": "choice",
+        "choice": "q2",
+        "probabilities": {
+          "q2": 1,
+          "q3": 0,
+          "q4": 0,
+          "none": 0,
+          "q1": 0
+        },
+        "confidence": 1
+      },
+      "evidence_enough_to_report_price": {
+        "type": "noul",
+        "noul": 0.95
+      }
+    },
+    "usage": {
+      "input_tokens": 1671,
+      "output_tokens": 113,
+      "cost": 7.0182e-05
+    },
+    "id": "gen-dec-1790879028-pMyp26UVAxNHgIWq6HJ3",
+    "provider": "TypeSafe"
+  },
+  "policy": {
+    "min_probability": 0.8,
+    "min_margin": 0.15,
+    "review_labels": [
+      "abstain",
+      "ask_user",
+      "defer",
+      "insufficient_evidence",
+      "none",
+      "other",
+      "review",
+      "unknown",
+      "wait"
+    ],
+    "executes_actions": false
+  },
+  "elapsed_seconds": 0.499892,
+  "mode": "jev_api",
+  "jev_called": true,
+  "transport": "openrouter"
+}
